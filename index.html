@@ -5,9 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Quiz</title>
+    <title>Music Quiz Game</title>
 </head>
 <body>
+
+    <header class="info">
+        <a href="" id="high-scores" class="hs-header">High Scores <i class=""></i></a>
+        <div class="timer">
+        <p class="timer-display">Time Remaining: <span class="timerCounter">60</span></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+            <h1 class="ready">Test your music trivia skills</h1>
+            <p class="rules">
+                This quiz will test you on some random facts about popular musicians from the past, present and possibly the future!.<br>
+                You will be given 5 questions to be answered within the designated time limit. Each wrong answer will subtract points from your total score.<br>
+                Have fun and Good Luck!<br>
+            </p>
+            <div class="buttons">
+                <button id="start" class="start btn">Start</button>
+                <button id="high-scores" class="btn hs-btn">view scores</button>
+            </div>
+        </div>
+
+        <div id="game" class="flex-column  justify-center hidden">
+            <h1 id="question">Question</h1>
+            <div class="answer-options">
+                <p class="answer-letter">A</p>
+                <p class="answer-text" id="choice-1">Billie Joe Armstrong</p>
+            </div>
+            <div class="answer-options">
+                <p class="answer-letter">B</p>
+                <p class="answer-text" id="choice-2">Billy Joel</p>
+            </div>
+            <div class="answer-options">
+                <p class="answer-letter">C</p>
+                <p class="answer-text" id="choice-3">Billy Idol</p>
+            </div>
+            <div class="answer-options">
+                <p class="answer-letter">D</p>
+                <p class="answer-text" id="choice-4">Billy Bob Thornton</p>
+            </div>
+        </div>
+
+        <div id="results" class="flex-column flex-center">
+            <h1 class="finished">You Did It!</h1>
+            <p class="grade">You have scored <span class="finalScore">0</span> out of 100!</p>
+            <label>Please enter your initials:</label> 
+            <input type="text" id="initials" placeholder="Initials here...">
+            <button id="finish" class="btn">Submit</button>
+        </div>
+
+    </div>
 
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
