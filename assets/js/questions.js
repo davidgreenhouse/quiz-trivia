@@ -50,3 +50,21 @@ var questionsArray = [{
 },
 
 ]
+
+
+function randomizeQuestions() {
+    let questionsClone = questionsArray;
+    for (let i = 0; i < questionsClone.length; i++) {
+
+        let answersArray = questionsClone[i].answersArray;
+        answersArray.sort(() => {
+            return (Math.floor(Math.random() * 3) - 1);
+        });
+    }
+
+    questionsClone = questionsClone.sort(() => {
+        return (Math.floor(Math.random() * 3) - 1);
+    });
+
+    return questionsClone;
+}
