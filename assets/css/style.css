@@ -32,3 +32,39 @@ h1 {
     padding: 20px;
     background:white;
 }
+
+.rules {
+    font-size: 2rem;
+    text-align: center;
+    background:var(--clear);
+    line-height: 2;
+}
+
+.answer-options {
+    display: flex;
+    width: 100%;
+    border-radius: .4rem;
+    background: lightblue;
+    font-size: 20px;
+    margin-bottom: .8rem;
+    min-width: 20px;
+}
+
+.answer-options:hover {
+    cursor: pointer;
+    box-shadow: .4rem .4rem rgba(12, 15, 177, 0.6);
+    transition: transform 200ms;
+    transform: scale(1.05);
+}
+
+.answer-letter {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.answer-text {
+    padding: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

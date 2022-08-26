@@ -12,3 +12,26 @@ var secondsLeft = 60;
 var currentScore = 0;
 var currentQuestion = 0;
 var finalScore;
+
+function startQuiz() {
+    console.log('Started');
+    document.getElementById('home').style.display="none";
+    document.getElementById('game').style.display='block';
+    
+    startTimer();
+    getNewQuestion();
+}
+startButton.addEventListener('click', startQuiz)
+
+
+function startTimer() {
+    timer.textContent = secondsLeft;
+    let timerInterval = setInterval(function() {
+        secondsLeft--;
+        timer.textContent = secondsLeft;
+        if (secondsLeft <= 0) {
+            clearInterval(timerInterval);
+            // endGame();
+        }
+    }, 1000)
+}
