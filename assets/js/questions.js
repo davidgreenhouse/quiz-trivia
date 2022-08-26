@@ -1,4 +1,4 @@
-var questions = [{
+var questionsArray = [{
 
     question: "Which of the following artists would be at a bar, at nine o'clock, on a saturday",
     answersArray: [
