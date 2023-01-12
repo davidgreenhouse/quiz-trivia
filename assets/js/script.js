@@ -125,7 +125,7 @@ function startQuiz() {
 startButton.addEventListener('click', startQuiz)
 
 
-function startTimer() {
+/* function startTimer() {
     timer.textContent = secondsLeft;
     let timerInterval = setInterval(function() {
         secondsLeft--;
@@ -134,6 +134,23 @@ function startTimer() {
             clearInterval(timerInterval);
         }
     }, 1000)
+} */
+
+function startTimer() {
+    var timeInterval = setInterval(function () {
+        if (timeLeft > 1) {
+            timerEl.textContent = timeLeft + " seconds remaining";
+            timeLeft--;
+        } else if (timeLeft == 1) {
+            timerEl.textContent = timeLeft + " second remaining";
+            timeLeft--;
+        } else {
+            timerEl.textContent = "Time Is Up";
+            quizHeader.textContent = "You Have Lost";
+            losses++;
+            clearInterval(timeInterval);
+        }
+    }, 1000);
 }
 
 var answerOne = document.querySelector('#answer-1')
